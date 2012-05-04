@@ -30,7 +30,7 @@ class Guest extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'Guest';
+		return 'guest';
 	}
 
 	/**

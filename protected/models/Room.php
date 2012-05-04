@@ -36,7 +36,7 @@ class Room extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'Room';
+		return 'room';
 	}
 
 	/**

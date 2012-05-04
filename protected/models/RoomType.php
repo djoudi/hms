@@ -25,7 +25,7 @@ class RoomType extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'RoomType';
+		return 'roomtype';
 	}
 
 	/**

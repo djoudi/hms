@@ -24,3 +24,7 @@ About the /www/hms/assets folder
 	Yii generates scripts files dynamically to this folder, 
 so there will be an error if there's no such a folder, but 
 keep in mind, any file in this folder should not be checked in.
+
+Note: in linux, this folder should be granted full permission by:
+sudo chmod -R 777 /var/www/hms/assets/
+

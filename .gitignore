@@ -1,0 +1,5 @@
+# ignore file under assets/
+assets/*
+
+# ignore vim swap files
+*.swp
