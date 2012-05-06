@@ -1071,3 +1071,54 @@ REQUEST_URI=/hms/index.php?r=Room
 in /var/www/hms/protected/views/room/index.php (17)
 in /var/www/hms/protected/controllers/RoomController.php (133)
 in /var/www/hms/index.php (13)
+2012/05/06 16:57:41 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "D:\wamp\www\hms\assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in D:\wamp\www\yii\framework\web\CAssetManager.php:116
+Stack trace:
+#0 D:\wamp\www\yii\framework\web\CAssetManager.php(101): CAssetManager->setBasePath('D:\wamp\www\hms...')
+#1 D:\wamp\www\yii\framework\web\CAssetManager.php(219): CAssetManager->getBasePath()
+#2 D:\wamp\www\yii\framework\web\CClientScript.php(449): CAssetManager->publish('D:\wamp\www\yii...')
+#3 D:\wamp\www\yii\framework\web\CClientScript.php(486): CClientScript->getCoreScriptUrl()
+#4 D:\wamp\www\yii\framework\web\CClientScript.php(302): CClientScript->getPackageBaseUrl('jquery')
+#5 D:\wamp\www\yii\framework\web\CClientScript.php(195): CClientScript->renderCoreScripts()
+#6 D:\wamp\www\yii\framework\web\CController.php(352): CClientScript->render('<!DOCTYPE html ...')
+#7 D:\wamp\www\yii\framework\web\CController.php(789): CController->processOutput('<!DOCTYPE html ...')
+#8 D:\wamp\www\hms\protected\controllers\SiteController.php(92): CController->render('login', Array)
+#9 D:\wamp\www\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#10 D:\wamp\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 D:\wamp\www\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#12 D:\wamp\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\wamp\www\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#14 D:\wamp\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#15 D:\wamp\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 D:\wamp\www\hms\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/hms/index.php?r=site/login
+HTTP_REFERER=http://localhost/hms/index.php
+---
+2012/05/06 16:58:13 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\wamp\www\yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 D:\wamp\www\yii\framework\db\CDbConnection.php(331): CDbConnection->open()
+#1 D:\wamp\www\yii\framework\db\CDbConnection.php(309): CDbConnection->setActive(true)
+#2 D:\wamp\www\yii\framework\base\CModule.php(388): CDbConnection->init()
+#3 D:\wamp\www\yii\framework\base\CApplication.php(431): CModule->getComponent('db')
+#4 D:\wamp\www\yii\framework\db\ar\CActiveRecord.php(615): CApplication->getDb()
+#5 D:\wamp\www\yii\framework\db\ar\CActiveRecord.php(2263): CActiveRecord->getDbConnection()
+#6 D:\wamp\www\yii\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(User))
+#7 D:\wamp\www\hms\protected\models\User.php(20): CActiveRecord::model('User')
+#8 D:\wamp\www\hms\protected\components\UserIdentity.php(13): User::model()
+#9 D:\wamp\www\hms\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#10 D:\wamp\www\yii\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#11 D:\wamp\www\yii\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 D:\wamp\www\yii\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#13 D:\wamp\www\hms\protected\controllers\SiteController.php(88): CModel->validate()
+#14 D:\wamp\www\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#15 D:\wamp\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 D:\wamp\www\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#17 D:\wamp\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 D:\wamp\www\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#19 D:\wamp\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#20 D:\wamp\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 D:\wamp\www\hms\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/hms/index.php?r=site/login
+HTTP_REFERER=http://localhost/hms/index.php?r=site/login
+---
