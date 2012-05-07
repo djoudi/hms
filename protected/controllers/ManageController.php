@@ -7,22 +7,28 @@ class ManageController extends Controller
 		$this->render('index');
 	}
 
-	public function actionCheckin($id) {
-		$model=new LoginForm;
+	public function actionCheckin() {
+		$model=new CheckinForm;
 
-		// collect user input data
-		if(isset($_POST['LoginForm']))
+		// uncomment the following code to enable ajax-based validation
+		/*
+		if(isset($_POST['ajax']) && $_POST['ajax']==='checkin-form-checkin-form')
 		{
-		//	$model->attributes=$_POST['LoginForm'];
-			// validate user input and redirect to the previous page if valid
-			//if($model->validate() && $model->login())
-				//$this->redirect(Yii::app()->user->returnUrl);
-				return 'hongfei';
+		    echo CActiveForm::validate($model);
+		    Yii::app()->end();
 		}
-		
-		//$this->renderPartial('checkin', array('id'=>$id));
-		// display the login form
-		$this->renderPartial('login',array('model'=>$model));
+		*/
+
+		if(isset($_POST['CheckinForm']))
+		{
+		    $model->attributes=$_POST['CheckinForm'];
+		    if($model->validate())
+		    {
+				echo 'hongfei';
+				Yii::app()->end();
+		    }
+		}
+		$this->renderPartial('checkin',array('model'=>$model));
 	}
 
 	// Uncomment the following methods and override them if needed

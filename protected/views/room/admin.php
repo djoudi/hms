@@ -48,25 +48,11 @@ $('a.ajax').on('click', function() {
             url,
             {},
             function(responseText, textStatus, XMLHttpRequest) {
-        		var v = $('#form').validate({
-					submitHandler: function(form) {
-						$('#form').ajaxSubmit({
-							success: function(rt) {
-								alert(rt);
-							}
-						});
-					}
-				});
-				
-				$('#reset').click(function() {
-					v.resetForm();
-				});
-				
 	            dialog.dialog({
 					modal: true,
 					buttons: {
-						'Create an account': function() {
-							$('#form').submit();
+						'Checkin': function() {
+							$('#checkin-form').submit();
 						},
 						Cancel: function() {
 							$(this).dialog('close');
