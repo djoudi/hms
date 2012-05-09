@@ -1122,3 +1122,239 @@ Stack trace:
 REQUEST_URI=/hms/index.php?r=site/login
 HTTP_REFERER=http://localhost/hms/index.php?r=site/login
 ---
+2012/05/08 22:15:57 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'hms.room' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `room`.
+in /data/wwwroot/hms/protected/controllers/RoomController.php (130)
+in /data/wwwroot/hms/index.php (13)
+2012/05/08 22:15:57 [error] [exception.CDbException] exception 'CDbException' with message 'The table "room" for active record class "Room" cannot be found in the database.' in /data/wwwroot/yii/framework/db/ar/CActiveRecord.php:2264
+Stack trace:
+#0 /data/wwwroot/yii/framework/db/ar/CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(Room))
+#1 /data/wwwroot/yii/framework/web/CActiveDataProvider.php(75): CActiveRecord::model('Room')
+#2 /data/wwwroot/hms/protected/controllers/RoomController.php(130): CActiveDataProvider->__construct('Room')
+#3 /data/wwwroot/yii/framework/web/actions/CInlineAction.php(50): RoomController->actionIndex()
+#4 /data/wwwroot/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /data/wwwroot/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /data/wwwroot/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /data/wwwroot/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /data/wwwroot/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /data/wwwroot/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /data/wwwroot/yii/framework/web/CController.php(292): CFilterChain->run()
+#11 /data/wwwroot/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /data/wwwroot/yii/framework/web/CWebApplication.php(276): CController->run('')
+#13 /data/wwwroot/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('Room')
+#14 /data/wwwroot/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /data/wwwroot/hms/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/hms/index.php?r=Room
+HTTP_REFERER=http://127.0.0.1/hms/index.php
+---
+2012/05/08 22:18:29 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'hms.roomtype' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `roomtype`.
+in /data/wwwroot/hms/protected/models/RoomType.php (20)
+in /data/wwwroot/hms/protected/views/room/_view.php (12)
+in /data/wwwroot/hms/protected/views/room/index.php (17)
+2012/05/08 22:18:29 [error] [exception.CDbException] exception 'CDbException' with message 'The table "roomtype" for active record class "RoomType" cannot be found in the database.' in /data/wwwroot/yii/framework/db/ar/CActiveRecord.php:2264
+Stack trace:
+#0 /data/wwwroot/yii/framework/db/ar/CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(RoomType))
+#1 /data/wwwroot/hms/protected/models/RoomType.php(20): CActiveRecord::model('RoomType')
+#2 /data/wwwroot/hms/protected/views/room/_view.php(12): RoomType::model()
+#3 /data/wwwroot/yii/framework/web/CBaseController.php(127): require('/data/wwwroot/h...')
+#4 /data/wwwroot/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/data/wwwroot/h...', Array, true)
+#5 /data/wwwroot/yii/framework/web/CController.php(870): CBaseController->renderFile('/data/wwwroot/h...', Array, true)
+#6 /data/wwwroot/yii/framework/zii/widgets/CListView.php(242): CController->renderPartial('_view', Array)
+#7 /data/wwwroot/yii/framework/zii/widgets/CBaseListView.php(158): CListView->renderItems()
+#8 [internal function]: CBaseListView->renderSection(Array)
+#9 /data/wwwroot/yii/framework/zii/widgets/CBaseListView.php(141): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{sort...')
+#10 /data/wwwroot/yii/framework/zii/widgets/CBaseListView.php(126): CBaseListView->renderContent()
+#11 /data/wwwroot/yii/framework/web/CBaseController.php(174): CBaseListView->run()
+#12 /data/wwwroot/hms/protected/views/room/index.php(17): CBaseController->widget('zii.widgets.CLi...', Array)
+#13 /data/wwwroot/yii/framework/web/CBaseController.php(127): require('/data/wwwroot/h...')
+#14 /data/wwwroot/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/data/wwwroot/h...', Array, true)
+#15 /data/wwwroot/yii/framework/web/CController.php(870): CBaseController->renderFile('/data/wwwroot/h...', Array, true)
+#16 /data/wwwroot/yii/framework/web/CController.php(783): CController->renderPartial('index', Array, true)
+#17 /data/wwwroot/hms/protected/controllers/RoomController.php(133): CController->render('index', Array)
+#18 /data/wwwroot/yii/framework/web/actions/CInlineAction.php(50): RoomController->actionIndex()
+#19 /data/wwwroot/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#20 /data/wwwroot/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#21 /data/wwwroot/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#22 /data/wwwroot/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#23 /data/wwwroot/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#24 /data/wwwroot/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#25 /data/wwwroot/yii/framework/web/CController.php(292): CFilterChain->run()
+#26 /data/wwwroot/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#27 /data/wwwroot/yii/framework/web/CWebApplication.php(276): CController->run('')
+#28 /data/wwwroot/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('Room')
+#29 /data/wwwroot/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#30 /data/wwwroot/hms/index.php(13): CApplication->run()
+#31 {main}
+REQUEST_URI=/hms/index.php?r=Room
+HTTP_REFERER=http://127.0.0.1/hms/index.php
+---
+2012/05/08 23:05:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "users/email".' in /data/wwwroot/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /data/wwwroot/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('users/email')
+#1 /data/wwwroot/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /data/wwwroot/hms/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/hms/index.php?r=users/email&id=3
+HTTP_REFERER=http://127.0.0.1/hms/index.php?r=room/admin
+---
+2012/05/09 20:50:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "users/email".' in /data/wwwroot/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /data/wwwroot/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('users/email')
+#1 /data/wwwroot/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /data/wwwroot/hms/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/hms/index.php?r=users/email&id=3
+HTTP_REFERER=http://127.0.0.1/hms/index.php?r=room/admin
+---
+2012/05/09 21:15:50 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /data/wwwroot/yii/framework/web/CController.php:337
+Stack trace:
+#0 /data/wwwroot/yii/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /data/wwwroot/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#2 /data/wwwroot/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /data/wwwroot/yii/framework/web/CWebApplication.php(276): CController->run('checkin')
+#4 /data/wwwroot/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('manage/checkin')
+#5 /data/wwwroot/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /data/wwwroot/hms/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/hms/index.php?r=manage/checkin&id=4
+HTTP_REFERER=http://127.0.0.1/hms/index.php?r=room/admin
+---
+2012/05/09 21:15:56 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /data/wwwroot/yii/framework/web/CController.php:337
+Stack trace:
+#0 /data/wwwroot/yii/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /data/wwwroot/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#2 /data/wwwroot/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /data/wwwroot/yii/framework/web/CWebApplication.php(276): CController->run('checkin')
+#4 /data/wwwroot/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('manage/checkin')
+#5 /data/wwwroot/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /data/wwwroot/hms/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/hms/index.php?r=manage/checkin&id=4
+HTTP_REFERER=http://127.0.0.1/hms/index.php?r=room/admin
+---
+2012/05/09 21:16:35 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /data/wwwroot/yii/framework/web/CController.php:337
+Stack trace:
+#0 /data/wwwroot/yii/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /data/wwwroot/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#2 /data/wwwroot/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /data/wwwroot/yii/framework/web/CWebApplication.php(276): CController->run('checkin')
+#4 /data/wwwroot/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('manage/checkin')
+#5 /data/wwwroot/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /data/wwwroot/hms/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/hms/index.php?r=manage/checkin&id=4
+HTTP_REFERER=http://127.0.0.1/hms/index.php?r=room/admin
+---
+2012/05/09 21:16:52 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /data/wwwroot/yii/framework/web/CController.php:337
+Stack trace:
+#0 /data/wwwroot/yii/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /data/wwwroot/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#2 /data/wwwroot/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /data/wwwroot/yii/framework/web/CWebApplication.php(276): CController->run('checkin')
+#4 /data/wwwroot/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('manage/checkin')
+#5 /data/wwwroot/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /data/wwwroot/hms/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/hms/index.php?r=manage/checkin&id=3
+HTTP_REFERER=http://127.0.0.1/hms/index.php?r=room/admin
+---
+2012/05/09 21:54:20 [warning] [application] Failed to set unsafe attribute "id" of "CheckinForm".
+in /data/wwwroot/hms/protected/controllers/ManageController.php (23)
+in /data/wwwroot/hms/index.php (13)
+2012/05/09 21:54:20 [warning] [application] Failed to set unsafe attribute "username" of "CheckinForm".
+in /data/wwwroot/hms/protected/controllers/ManageController.php (23)
+in /data/wwwroot/hms/index.php (13)
+2012/05/09 21:54:20 [warning] [application] Failed to set unsafe attribute "gender" of "CheckinForm".
+in /data/wwwroot/hms/protected/controllers/ManageController.php (23)
+in /data/wwwroot/hms/index.php (13)
+2012/05/09 21:54:20 [warning] [application] Failed to set unsafe attribute "mobile" of "CheckinForm".
+in /data/wwwroot/hms/protected/controllers/ManageController.php (23)
+in /data/wwwroot/hms/index.php (13)
+2012/05/09 21:54:20 [warning] [application] Failed to set unsafe attribute "checkinDate" of "CheckinForm".
+in /data/wwwroot/hms/protected/controllers/ManageController.php (23)
+in /data/wwwroot/hms/index.php (13)
+2012/05/09 21:54:20 [warning] [application] Failed to set unsafe attribute "checkoutDate" of "CheckinForm".
+in /data/wwwroot/hms/protected/controllers/ManageController.php (23)
+in /data/wwwroot/hms/index.php (13)
+2012/05/09 21:54:35 [warning] [application] Failed to set unsafe attribute "gender" of "CheckinForm".
+in /data/wwwroot/hms/protected/controllers/ManageController.php (23)
+in /data/wwwroot/hms/index.php (13)
+2012/05/09 21:54:48 [warning] [application] Failed to set unsafe attribute "gender" of "CheckinForm".
+in /data/wwwroot/hms/protected/controllers/ManageController.php (23)
+in /data/wwwroot/hms/index.php (13)
+2012/05/09 21:55:14 [warning] [application] Failed to set unsafe attribute "gender" of "CheckinForm".
+in /data/wwwroot/hms/protected/controllers/ManageController.php (23)
+in /data/wwwroot/hms/index.php (13)
+2012/05/09 21:57:12 [error] [php] include(mantch.php): failed to open stream: No such file or directory (/data/wwwroot/yii/framework/YiiBase.php:418)
+Stack trace:
+#0 /data/wwwroot/yii/framework/validators/CValidator.php(171): import()
+#1 /data/wwwroot/yii/framework/base/CModel.php(285): createValidator()
+#2 /data/wwwroot/yii/framework/base/CModel.php(259): CheckinForm->createValidators()
+#3 /data/wwwroot/yii/framework/base/CModel.php(544): CheckinForm->getValidators()
+#4 /data/wwwroot/yii/framework/base/CModel.php(466): CheckinForm->getSafeAttributeNames()
+#5 /data/wwwroot/yii/framework/base/CComponent.php(153): CheckinForm->setAttributes()
+#6 /data/wwwroot/hms/protected/controllers/ManageController.php(23): CheckinForm->__set()
+#7 /data/wwwroot/yii/framework/web/actions/CInlineAction.php(50): ManageController->actionCheckin()
+#8 /data/wwwroot/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#9 /data/wwwroot/yii/framework/web/CController.php(287): ManageController->runAction()
+#10 /data/wwwroot/yii/framework/web/CController.php(266): ManageController->runActionWithFilters()
+#11 /data/wwwroot/yii/framework/web/CWebApplication.php(276): ManageController->run()
+#12 /data/wwwroot/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#13 /data/wwwroot/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#14 /data/wwwroot/hms/index.php(13): CWebApplication->run()
+REQUEST_URI=/hms/index.php?r=manage/checkin&id=3
+in /data/wwwroot/hms/protected/controllers/ManageController.php (23)
+in /data/wwwroot/hms/index.php (13)
+2012/05/09 21:57:42 [error] [php] include(mantch.php): failed to open stream: No such file or directory (/data/wwwroot/yii/framework/YiiBase.php:418)
+Stack trace:
+#0 /data/wwwroot/yii/framework/validators/CValidator.php(171): import()
+#1 /data/wwwroot/yii/framework/base/CModel.php(285): createValidator()
+#2 /data/wwwroot/yii/framework/base/CModel.php(259): CheckinForm->createValidators()
+#3 /data/wwwroot/yii/framework/base/CModel.php(544): CheckinForm->getValidators()
+#4 /data/wwwroot/yii/framework/base/CModel.php(466): CheckinForm->getSafeAttributeNames()
+#5 /data/wwwroot/yii/framework/base/CComponent.php(153): CheckinForm->setAttributes()
+#6 /data/wwwroot/hms/protected/controllers/ManageController.php(23): CheckinForm->__set()
+#7 /data/wwwroot/yii/framework/web/actions/CInlineAction.php(50): ManageController->actionCheckin()
+#8 /data/wwwroot/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#9 /data/wwwroot/yii/framework/web/CController.php(287): ManageController->runAction()
+#10 /data/wwwroot/yii/framework/web/CController.php(266): ManageController->runActionWithFilters()
+#11 /data/wwwroot/yii/framework/web/CWebApplication.php(276): ManageController->run()
+#12 /data/wwwroot/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#13 /data/wwwroot/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#14 /data/wwwroot/hms/index.php(13): CWebApplication->run()
+REQUEST_URI=/hms/index.php?r=manage/checkin&id=3
+in /data/wwwroot/hms/protected/controllers/ManageController.php (23)
+in /data/wwwroot/hms/index.php (13)
+2012/05/09 21:58:05 [warning] [application] Failed to set unsafe attribute "gender" of "CheckinForm".
+in /data/wwwroot/hms/protected/controllers/ManageController.php (23)
+in /data/wwwroot/hms/index.php (13)
+2012/05/09 21:58:13 [warning] [application] Failed to set unsafe attribute "gender" of "CheckinForm".
+in /data/wwwroot/hms/protected/controllers/ManageController.php (23)
+in /data/wwwroot/hms/index.php (13)
+2012/05/09 21:58:31 [warning] [application] Failed to set unsafe attribute "gender" of "CheckinForm".
+in /data/wwwroot/hms/protected/controllers/ManageController.php (23)
+in /data/wwwroot/hms/index.php (13)
+2012/05/09 22:03:38 [warning] [application] Failed to set unsafe attribute "gender" of "CheckinForm".
+in /data/wwwroot/hms/protected/controllers/ManageController.php (23)
+in /data/wwwroot/hms/index.php (13)
+2012/05/09 22:03:38 [error] [php] preg_match(): Delimiter must not be alphanumeric or backslash (/data/wwwroot/yii/framework/validators/CRegularExpressionValidator.php:51)
+Stack trace:
+#0 /data/wwwroot/yii/framework/base/CModel.php(158): CRegularExpressionValidator->validate()
+#1 /data/wwwroot/hms/protected/controllers/ManageController.php(24): CheckinForm->validate()
+#2 /data/wwwroot/yii/framework/web/actions/CInlineAction.php(50): ManageController->actionCheckin()
+#3 /data/wwwroot/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /data/wwwroot/yii/framework/web/CController.php(287): ManageController->runAction()
+#5 /data/wwwroot/yii/framework/web/CController.php(266): ManageController->runActionWithFilters()
+#6 /data/wwwroot/yii/framework/web/CWebApplication.php(276): ManageController->run()
+#7 /data/wwwroot/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#8 /data/wwwroot/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /data/wwwroot/hms/index.php(13): CWebApplication->run()
+REQUEST_URI=/hms/index.php?r=manage/checkin&id=3
+in /data/wwwroot/hms/protected/controllers/ManageController.php (24)
+in /data/wwwroot/hms/index.php (13)
+2012/05/09 22:04:27 [warning] [application] Failed to set unsafe attribute "gender" of "CheckinForm".
+in /data/wwwroot/hms/protected/controllers/ManageController.php (23)
+in /data/wwwroot/hms/index.php (13)
+2012/05/09 22:04:41 [warning] [application] Failed to set unsafe attribute "gender" of "CheckinForm".
+in /data/wwwroot/hms/protected/controllers/ManageController.php (23)
+in /data/wwwroot/hms/index.php (13)
