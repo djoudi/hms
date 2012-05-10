@@ -57,7 +57,7 @@ return array(
 			'connectionString' => 'mysql:host=localhost;dbname=hms',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => 'xxxxxx',
+			'password' => '',
 			'charset' => 'utf8',
 		),
 		'errorHandler'=>array(
