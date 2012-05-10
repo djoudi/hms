@@ -48,7 +48,12 @@
 
 <?php $this->endWidget(); ?>
 <script type="text/javascript">
-	$(function() {
+$(function() {
+		jQuery.validator.addMethod("isMobile", function(value, element) {       
+			var length = value.length;   
+			var mobile = /^(((13[0-9]{1})|(15[0-9]{1}))+\d{8})$/;   
+			return this.optional(element) || (length == 11 && mobile.test(value));       
+		}, "请正确填写您的手机号码");  
 		$("#checkin-form").validate({
 			submitHandler: function(form) {
 				$(form).ajaxSubmit(function() {
@@ -59,9 +64,17 @@
 				'CheckinForm[id]': 'required',
 				'CheckinForm[username]': 'required',
 				'CheckinForm[gender]': 'required',
-				'CheckinForm[mobile]': 'required',
+				'CheckinForm[mobile]': {'required':true,'isMobile':true},
 				'CheckinForm[checkinDate]': 'required',
 				'CheckinForm[checkoutDate]': 'required'
+				},
+			messages:{ 
+				'CheckinForm[id]': {'required': "输入身份证号"},
+				'CheckinForm[username]': {'required':"请输入姓名"},
+				'CheckinForm[gender]': {'required':"选择性别"},
+				'CheckinForm[mobile]': {'required':"填写手机号码"},
+				'CheckinForm[checkinDate]': {'required':"入住日期"},
+				'CheckinForm[checkoutDate]': {'required':"退房日期"}
 			}
 		});
 	});
