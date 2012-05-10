@@ -23,8 +23,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'gender'); ?>
-		<?php echo $form->textField($model,'gender'); ?>
+		<?php echo $form->labelEx($model,'性别'); ?>
+		<?php echo  $form->radioButtonList($model,'gender',array('1'=>'男', '0'=>'女'),array('template'=>'{input}{label}','separator'=>'&nbsp;')); ?>
 		<?php echo $form->error($model,'gender'); ?>
 	</div>
 
@@ -49,11 +49,19 @@
 <?php $this->endWidget(); ?>
 <script type="text/javascript">
 $(function() {
+		// 身份证号码验证       
+		jQuery.validator.addMethod("isIdCardNo", function(value, element) {       
+			return this.optional(element) || isIdCardNo(value);       
+			}, "请正确输入您的身份证号码");
+		jQuery.validator.addMethod("stringCheck", function(value, element) {       
+			return this.optional(element) || /^[\u0391-\uFFE5\w]+$/.test(value);       
+			}, "只能包括中文字、英文字母、数字和下划线"); 
 		jQuery.validator.addMethod("isMobile", function(value, element) {       
 			var length = value.length;   
 			var mobile = /^(((13[0-9]{1})|(15[0-9]{1}))+\d{8})$/;   
 			return this.optional(element) || (length == 11 && mobile.test(value));       
 		}, "请正确填写您的手机号码");  
+	
 		$("#checkin-form").validate({
 			submitHandler: function(form) {
 				$(form).ajaxSubmit(function() {
@@ -61,8 +69,8 @@ $(function() {
 				});
 			},
 			rules: {
-				'CheckinForm[id]': 'required',
-				'CheckinForm[username]': 'required',
+				'CheckinForm[id]': {'required':true},
+				'CheckinForm[username]': {'required':true,'stringCheck':true},
 				'CheckinForm[gender]': 'required',
 				'CheckinForm[mobile]': {'required':true,'isMobile':true},
 				'CheckinForm[checkinDate]': 'required',
