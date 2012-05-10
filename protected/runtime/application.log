@@ -1122,3 +1122,107 @@ Stack trace:
 REQUEST_URI=/hms/index.php?r=site/login
 HTTP_REFERER=http://localhost/hms/index.php?r=site/login
 ---
+2012/05/07 15:10:32 [error] [php] Undefined variable: id (D:\wamp\www\hms\protected\views\manage\validate.php:1)
+Stack trace:
+#0 D:\wamp\www\yii\framework\web\CController.php(870): ManageController->renderFile()
+#1 D:\wamp\www\hms\protected\controllers\ManageController.php(25): ManageController->renderPartial()
+#2 unknown(0): ManageController->actionCheckin()
+#3 D:\wamp\www\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#4 D:\wamp\www\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#5 D:\wamp\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#6 D:\wamp\www\yii\framework\web\CController.php(287): ManageController->runAction()
+#7 D:\wamp\www\yii\framework\web\CController.php(266): ManageController->runActionWithFilters()
+#8 D:\wamp\www\yii\framework\web\CWebApplication.php(276): ManageController->run()
+#9 D:\wamp\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#10 D:\wamp\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 D:\wamp\www\hms\index.php(13): CWebApplication->run()
+REQUEST_URI=/hms/index.php?r=manage/checkin&id=3
+in D:\wamp\www\hms\protected\views\manage\validate.php (1)
+in D:\wamp\www\hms\protected\controllers\ManageController.php (25)
+in D:\wamp\www\hms\index.php (13)
+2012/05/07 15:11:00 [error] [php] Undefined variable: id (D:\wamp\www\hms\protected\views\manage\validate.php:1)
+Stack trace:
+#0 D:\wamp\www\yii\framework\web\CController.php(870): ManageController->renderFile()
+#1 D:\wamp\www\hms\protected\controllers\ManageController.php(25): ManageController->renderPartial()
+#2 unknown(0): ManageController->actionCheckin()
+#3 D:\wamp\www\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#4 D:\wamp\www\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#5 D:\wamp\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#6 D:\wamp\www\yii\framework\web\CController.php(287): ManageController->runAction()
+#7 D:\wamp\www\yii\framework\web\CController.php(266): ManageController->runActionWithFilters()
+#8 D:\wamp\www\yii\framework\web\CWebApplication.php(276): ManageController->run()
+#9 D:\wamp\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#10 D:\wamp\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 D:\wamp\www\hms\index.php(13): CWebApplication->run()
+REQUEST_URI=/hms/index.php?r=manage/checkin&id=3
+in D:\wamp\www\hms\protected\views\manage\validate.php (1)
+in D:\wamp\www\hms\protected\controllers\ManageController.php (25)
+in D:\wamp\www\hms\index.php (13)
+2012/05/07 15:57:28 [error] [php] mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() (D:\wamp\www\hms\protected\controllers\SiteController.php:61)
+Stack trace:
+#0 D:\wamp\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 D:\wamp\www\yii\framework\web\CController.php(287): SiteController->runAction()
+#2 D:\wamp\www\yii\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#3 D:\wamp\www\yii\framework\web\CWebApplication.php(276): SiteController->run()
+#4 D:\wamp\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#5 D:\wamp\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#6 D:\wamp\www\hms\index.php(13): CWebApplication->run()
+REQUEST_URI=/hms/index.php?r=site/contact
+in D:\wamp\www\hms\protected\controllers\SiteController.php (61)
+in D:\wamp\www\hms\index.php (13)
+2012/05/07 16:00:27 [error] [exception.CException] exception 'CException' with message 'Alias "hms.models.CheckinForm" is invalid. Make sure it points to an existing directory or file.' in D:\wamp\www\yii\framework\YiiBase.php:343
+Stack trace:
+#0 D:\wamp\www\yii\framework\gii\generators\form\FormCode.php(58): YiiBase::import('hms.models.Chec...', true)
+#1 D:\wamp\www\yii\framework\validators\CInlineValidator.php(43): FormCode->validateModel('model', Array)
+#2 D:\wamp\www\yii\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(FormCode), 'model')
+#3 D:\wamp\www\yii\framework\base\CModel.php(158): CValidator->validate(Object(FormCode), NULL)
+#4 D:\wamp\www\yii\framework\gii\CCodeGenerator.php(158): CModel->validate()
+#5 D:\wamp\www\yii\framework\gii\CCodeGenerator.php(64): CCodeGenerator->prepare()
+#6 D:\wamp\www\yii\framework\web\actions\CInlineAction.php(50): CCodeGenerator->actionIndex()
+#7 D:\wamp\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 D:\wamp\www\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 D:\wamp\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 D:\wamp\www\yii\framework\web\CWebApplication.php(276): CController->run('')
+#11 D:\wamp\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('gii/form')
+#12 D:\wamp\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 D:\wamp\www\hms\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/hms/index.php?r=gii/form
+HTTP_REFERER=http://localhost/hms/index.php?r=gii/form
+---
+2012/05/07 16:01:52 [error] [exception.CException] exception 'CException' with message 'Alias "hms.models.CheckinForm" is invalid. Make sure it points to an existing directory or file.' in D:\wamp\www\yii\framework\YiiBase.php:343
+Stack trace:
+#0 D:\wamp\www\yii\framework\gii\generators\form\FormCode.php(58): YiiBase::import('hms.models.Chec...', true)
+#1 D:\wamp\www\yii\framework\validators\CInlineValidator.php(43): FormCode->validateModel('model', Array)
+#2 D:\wamp\www\yii\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(FormCode), 'model')
+#3 D:\wamp\www\yii\framework\base\CModel.php(158): CValidator->validate(Object(FormCode), NULL)
+#4 D:\wamp\www\yii\framework\gii\CCodeGenerator.php(158): CModel->validate()
+#5 D:\wamp\www\yii\framework\gii\CCodeGenerator.php(64): CCodeGenerator->prepare()
+#6 D:\wamp\www\yii\framework\web\actions\CInlineAction.php(50): CCodeGenerator->actionIndex()
+#7 D:\wamp\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 D:\wamp\www\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 D:\wamp\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 D:\wamp\www\yii\framework\web\CWebApplication.php(276): CController->run('')
+#11 D:\wamp\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('gii/form')
+#12 D:\wamp\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 D:\wamp\www\hms\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/hms/index.php?r=gii/form
+HTTP_REFERER=http://localhost/hms/index.php?r=gii/form
+---
+2012/05/07 16:09:33 [error] [php] Undefined variable: form (D:\wamp\www\hms\protected\views\manage\checkin.php:5)
+Stack trace:
+#0 D:\wamp\www\yii\framework\web\CController.php(870): ManageController->renderFile()
+#1 D:\wamp\www\hms\protected\controllers\ManageController.php(31): ManageController->renderPartial()
+#2 D:\wamp\www\yii\framework\web\actions\CInlineAction.php(50): ManageController->actionCheckin()
+#3 D:\wamp\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#4 D:\wamp\www\yii\framework\web\CController.php(287): ManageController->runAction()
+#5 D:\wamp\www\yii\framework\web\CController.php(266): ManageController->runActionWithFilters()
+#6 D:\wamp\www\yii\framework\web\CWebApplication.php(276): ManageController->run()
+#7 D:\wamp\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#8 D:\wamp\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 D:\wamp\www\hms\index.php(13): CWebApplication->run()
+REQUEST_URI=/hms/index.php?r=manage/checkin&id=3
+in D:\wamp\www\hms\protected\views\manage\checkin.php (5)
+in D:\wamp\www\hms\protected\controllers\ManageController.php (31)
+in D:\wamp\www\hms\index.php (13)

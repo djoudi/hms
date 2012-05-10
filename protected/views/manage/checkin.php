@@ -50,8 +50,8 @@
 	$(function() {
 		$("#checkin-form").validate({
 			submitHandler: function(form) {
-				$(form).ajaxSubmit({
-					target: "#result"
+				$(form).ajaxSubmit(function() {
+					$('#dialog').dialog('close');
 				});
 			},
 			rules: {
