@@ -18,15 +18,18 @@ class ManageController extends Controller
 		    Yii::app()->end();
 		}
 		*/
-
 		if(isset($_POST['CheckinForm']))
 		{
-		    $model->attributes=$_POST['CheckinForm'];
+		    $model->attributes = $_POST['CheckinForm'];
 		    if($model->validate())
 		    {
 				echo 'hongfei';
 				Yii::app()->end();
+				//return true;
 		    }
+			echo "test";
+			Yii::app()->end();
+			//return false;
 		}
 		$this->renderPartial('checkin',array('model'=>$model));
 	}

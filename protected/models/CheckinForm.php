@@ -20,8 +20,13 @@ class CheckinForm extends CFormModel
 		return array(
 			// username and password are required
 			array('id, username, mobile, checkinDate, checkoutDate', 'required'),
-			// rememberMe needs to be a boolean
+			array('id', 'match', 'pattern'=>'/^(\d{18,18}|\d{15,15}|\d{17,17}x)$/'),
+			array('mobile', 'match', 'pattern'=>'/^1[3|5][0-9]\d{4,8}$/'),
+			array('checkinDate', 'match', 'pattern'=>'/^\d{4}\d{2}\d{2}$/'),
+			array('checkoutDate', 'match', 'pattern'=>'/^\d{4}\d{2}\d{2}$/'),
 			array('gender', 'boolean'),
+		//	array('username', 'match', 'pattern'=>'/w/'),
+			// rememberMe needs to be a boolean
 		);
 	}
 

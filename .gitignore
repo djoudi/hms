@@ -1,5 +1,8 @@
 # ignore file under assets/
 assets/*
 
+# ignore runtime files
+protected/runtime/*
+
 # ignore vim swap files
 *.swp
