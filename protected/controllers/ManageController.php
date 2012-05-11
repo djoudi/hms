@@ -18,6 +18,7 @@ class ManageController extends Controller
 		    Yii::app()->end();
 		}
 		*/
+//		$model->setAttribute('gender','1');
 		if(isset($_POST['CheckinForm']))
 		{
 		    $model->attributes = $_POST['CheckinForm'];

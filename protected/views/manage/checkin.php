@@ -6,42 +6,40 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
-
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'id'); ?>
+		<?php echo $form->labelEx($model,'身份证'); ?>
 		<?php echo $form->textField($model,'id'); ?>
 		<?php echo $form->error($model,'id'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'username'); ?>
+		<?php echo $form->labelEx($model,'姓名'); ?>
 		<?php echo $form->textField($model,'username'); ?>
 		<?php echo $form->error($model,'username'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'性别'); ?>
-		<?php echo  $form->radioButtonList($model,'gender',array('1'=>'男', '0'=>'女'),array('template'=>'{input}{label}','separator'=>'&nbsp;')); ?>
+		<?php echo  $form->radioButtonList($model,'gender',array('1'=>'男', '0'=>'女'), array('separator'=>"   ", 'style'=>'display: inline;')); ?>
 		<?php echo $form->error($model,'gender'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'mobile'); ?>
+		<?php echo $form->labelEx($model,'移动电话'); ?>
 		<?php echo $form->textField($model,'mobile'); ?>
 		<?php echo $form->error($model,'mobile'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'checkinDate'); ?>
+		<?php echo $form->labelEx($model,'入住时间'); ?>
 		<?php echo $form->textField($model,'checkinDate'); ?>
 		<?php echo $form->error($model,'checkinDate'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'checkoutDate'); ?>
+		<?php echo $form->labelEx($model,'退房时间'); ?>
 		<?php echo $form->textField($model,'checkoutDate'); ?>
 		<?php echo $form->error($model,'checkoutDate'); ?>
 	</div>

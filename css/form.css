@@ -57,9 +57,13 @@ div.form label
 {
 	font-weight: bold;
 	font-size: 0.9em;
-	display: inline;
+	display: block;
 }
 
+div.form span label
+{
+	display: inline;
+}
 div.form .row
 {
 	margin: 5px 0;
