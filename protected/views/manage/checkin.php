@@ -34,16 +34,14 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'入住时间'); ?>
-		<?php echo $form->textField($model,'checkinDate'); ?>
-		<?php echo $form->error($model,'checkinDate'); ?>
+		<input name="CheckinForm[checkinDate]" id="CheckinForm_checkinDate" type="text"  onClick="WdatePicker()">
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'退房时间'); ?>
-		<?php echo $form->textField($model,'checkoutDate'); ?>
-		<?php echo $form->error($model,'checkoutDate'); ?>
-	</div>
+	<input name="CheckinForm[checkoutDate]" id="CheckinForm_checkoutDate" type="text"  onClick="WdatePicker()">
 
+	</div>
 <?php $this->endWidget(); ?>
 <script type="text/javascript">
 $(function() {
@@ -84,5 +82,6 @@ $(function() {
 			}
 		});
 	});
+jQuery('#checkoutDate').datepicker({'showAnim':'fold','showOn':'both','buttonImageOnly':true,'minDate':'new Date()','dateFormat':'yy-mm-dd'});
 </script>
 </div><!-- form -->

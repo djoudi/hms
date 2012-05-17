@@ -11,6 +11,7 @@ $this->menu=array(
 Yii::app()->getClientScript()->registerCoreScript( 'jquery.ui' );
 Yii::app()->getClientScript()->registerScriptFile(Yii::app()->request->baseUrl . '/script/jquery.validate.js');
 Yii::app()->getClientScript()->registerScriptFile(Yii::app()->request->baseUrl . '/script/jquery.form.js');
+Yii::app()->getClientScript()->registerScriptFile(Yii::app()->request->baseUrl . '/script/WdatePicker.js');
 
 Yii::app()->clientScript->registerCssFile(
 	Yii::app()->clientScript->getCoreScriptUrl().
@@ -131,3 +132,4 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		),
 	),
 )); ?>
+ 

@@ -91,6 +91,7 @@ div.form label.error,
 div.form span.error
 {
 	color: #C00;
+	display: inline;
 }
 
 div.form div.error input,
